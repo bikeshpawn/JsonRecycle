@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 
 import java.util.ArrayList;
 
@@ -27,8 +28,10 @@ GridLayoutManager gridLayoutManager =  new GridLayoutManager(this, 2);
 rv_view.setLayoutManager(gridLayoutManager);
 
 // For staggedred grid layout
-//StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
-//rvMovieLayout.setLayoutManager(staggeredGridLayoutManager);
+/*
+StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(3,StaggeredGridLayoutManager.HORIZONTAL);
+rv_view.setLayoutManager(staggeredGridLayoutManager);
+*/
 
         rv_view.setAdapter(new MovieListingAdapter(getMovieList()));//error in getMovieList and alt+enter we get below
 
@@ -38,7 +41,6 @@ rv_view.setLayoutManager(gridLayoutManager);
         ArrayList<MovieListingDetail> movieList = new ArrayList<>();// creating new custom arraylist
         movieList.add(new MovieListingDetail("Villian", R.drawable.b));
         movieList.add(new MovieListingDetail("Hero", R.drawable.c));
-        movieList.add(new MovieListingDetail("Tiger", R.drawable.e));
         movieList.add(new MovieListingDetail("Ball", R.drawable.j));
         movieList.add(new MovieListingDetail("AAndrond", R.drawable.k));
         movieList.add(new MovieListingDetail("Lucky", R.drawable.l));
